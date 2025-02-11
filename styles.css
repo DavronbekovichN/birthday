@@ -1,0 +1,173 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6a00, #ff8c00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    animation: fadeInUp 3s ease-in-out;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    animation: slideInFromLeft 2s ease-out;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 1s;
+}
+
+.cta-button {
+    margin-top: 30px;
+    padding: 20px 40px;
+    background: #ff4500;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: #ff5500;
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background: #f0f0f0;
+    animation: fadeIn 2s ease-in-out;
+    scroll-margin-top: 20px;
+}
+
+.photo-container {
+    width: 300px; /* Устанавливаем размер */
+    height: 300px; /* Делаем фото квадратным */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-in-out;
+}
+
+.birthday-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    max-width: 600px;
+    font-size: 1.25rem;
+    color: #333;
+    line-height: 1.8;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Interactive Section */
+.interactive-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.creative-btn {
+    padding: 20px 50px;
+    background: #7b3dff;
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.creative-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
